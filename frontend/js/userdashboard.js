@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5000/api/admin/dashboard';
+const BASE_URL = 'https://carent-soyj.onrender.com/api/admin/dashboard';
 
 async function fetchVehicleUsageChartData() {
     try {

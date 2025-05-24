@@ -11,7 +11,7 @@ let vehicleData;
 
 async function fetchVehicleDetails() {
   const token = localStorage.getItem('authToken');
-  const res = await fetch(`http://localhost:5000/api/vehicles/${vehicleId}`, {
+  const res = await fetch(`https://carent-soyj.onrender.com/api/vehicles/${vehicleId}`, {
     headers: { 'Authorization': `Bearer ${token}` },
   });
   vehicleData = await res.json();
@@ -50,7 +50,7 @@ confirmBookingBtn.addEventListener('click', async () => {
       totalAmount,
     };
 
-    const res = await fetch('http://localhost:5000/api/bookings', {
+    const res = await fetch('https://carent-soyj.onrender.com/api/bookings', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${token}`,

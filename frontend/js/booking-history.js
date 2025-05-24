@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     function fetchBookingHistory(status = 'All') {
         showLoader();
-        fetch('http://localhost:5000/api/bookings/my', {
+        fetch('https://carent-soyj.onrender.com/api/bookings/my', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${authToken}`,
@@ -119,7 +119,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     function cancelBooking(booking, cancelBtn) {
         showLoader();
-        fetch(`http://localhost:5000/api/bookings/cancel/${booking._id}`, {
+        fetch(`https://carent-soyj.onrender.com/api/bookings/cancel/${booking._id}`, {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${authToken}`,
@@ -146,7 +146,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     function generateInvoice(bookingId) {
         showLoader();
-        fetch(`http://localhost:5000/api/bookings/${bookingId}/invoice`, {
+        fetch(`https://carent-soyj.onrender.com/api/bookings/${bookingId}/invoice`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${authToken}`,
@@ -206,7 +206,7 @@ window.addEventListener('DOMContentLoaded', function () {
         }
 
         // Submit the review for the completed booking
-        fetch('http://localhost:5000/api/reviews/', {
+        fetch('https://carent-soyj.onrender.com/api/reviews/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

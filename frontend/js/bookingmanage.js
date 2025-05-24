@@ -1,4 +1,4 @@
-const API = 'http://localhost:5000/api/admin/bookings';
+const API = 'https://carent-soyj.onrender.com/api/admin/bookings';
 
 function renderBookings(data) {
   const container = document.getElementById('bookingsList');
@@ -58,7 +58,7 @@ async function fetchAll() {
   }
 
   try {
-    const res = await fetch('http://localhost:5000/api/admin/bookings', {
+    const res = await fetch('https://carent-soyj.onrender.com/api/admin/bookings', {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`

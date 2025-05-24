@@ -1,4 +1,4 @@
-const API = 'http://localhost:5000/api/admin/users';
+const API = 'https://carent-soyj.onrender.com/api/admin/users';
 
 function getAuthHeaders() {
   const token = localStorage.getItem('authToken');

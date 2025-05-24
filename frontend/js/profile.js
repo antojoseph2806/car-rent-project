@@ -9,7 +9,7 @@ function closeModal(id) {
 document.addEventListener('DOMContentLoaded', async () => {
   const token = localStorage.getItem('authToken');
 
-  const res = await fetch('http://localhost:5000/api/users/profile', {
+  const res = await fetch('https://carent-soyj.onrender.com/api/users/profile', {
       headers: { Authorization: `Bearer ${token}` }
   });
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('createdAt').textContent = `Member Since: ${new Date(data.createdAt).toDateString()}`;
 
   document.getElementById('profilePic').src = data.profilePic
-      ? `http://localhost:5000${data.profilePic}`
+      ? `https://carent-soyj.onrender.com${data.profilePic}`
       : 'https://via.placeholder.com/150?text=No+Image';
 
   // Pre-fill edit form
@@ -39,7 +39,7 @@ document.getElementById('editProfileForm').addEventListener('submit', async (e) 
   const formData = new FormData(e.target);
 
   try {
-      const res = await fetch('http://localhost:5000/api/users/profile', {
+      const res = await fetch('https://carent-soyj.onrender.com/api/users/profile', {
           method: 'PUT',
           headers: {
               Authorization: `Bearer ${token}`
@@ -66,7 +66,7 @@ document.getElementById('resetPasswordForm').addEventListener('submit', async (e
   const password = e.target.password.value;
 
   try {
-      const res = await fetch('http://localhost:5000/api/users/profile', {
+      const res = await fetch('https://carent-soyj.onrender.com/api/users/profile', {
           method: 'PUT',
           headers: {
               Authorization: `Bearer ${token}`,

@@ -1,4 +1,4 @@
-const APIF = 'http://localhost:5000/api/vehicles';
+const APIF = 'https://carent-soyj.onrender.com/api/vehicles';
 const grid = document.getElementById('vehiclesGrid');
 const loadAllBtn = document.getElementById('loadAllBtn');
 
@@ -53,7 +53,7 @@ function createCard(v) {
   card.dataset.available = v.availability;
 
   card.innerHTML = `
-    <img src="http://localhost:5000/uploads/${v.images[0] || 'placeholder.jpg'}" alt="${v.name}">
+    <img src="https://carent-soyj.onrender.com/uploads/${v.images[0] || 'placeholder.jpg'}" alt="${v.name}">
     <div class="card-content">
       <h3>${v.brand} ${v.name}</h3>
       <p><strong>Price/Day:</strong> ₹${v.pricePerDay}</p>
