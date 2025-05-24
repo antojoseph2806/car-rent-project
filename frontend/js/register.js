@@ -36,7 +36,7 @@ document.getElementById('register-form').addEventListener('submit', function (e)
 
   const userData = { name, email, phone, password };
 
-  fetch('http://localhost:5000/api/auth/register', {
+  fetch('https://carent-soyj.onrender.com/api/auth/register', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(userData),
