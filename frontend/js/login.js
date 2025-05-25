@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         stopOnFocus: true,
       }).showToast();
       return;
-    }htt
+    }
 
     try {
       const response = await fetch('https://carent-soyj.onrender.com/api/auth/login', {
